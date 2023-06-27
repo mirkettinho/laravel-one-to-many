@@ -34,7 +34,7 @@
       <td>{{$project->title}}</td>
       <td>{{$project->slug}}</td>
       <td>{{$project->description}}</td>
-      <td>{{$project->languages}}</td>
+      <td><span class="badge text-bg-primary">{{$project->type?->name}}</span></td>
       <td>{{$project->end_date}}</td>
       <td>
         <a class="bg-primary text-white" href="{{route("admin.projects.show", $project)}}"></i>show</a>

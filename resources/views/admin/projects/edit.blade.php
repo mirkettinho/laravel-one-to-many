@@ -38,6 +38,21 @@
   </div>
   {{-- 2 --}}
   <div class="mb-3">
+    <label for="title" class="form-label">Linguaggio</label>
+    <select class="form-select" name="type_id">
+      <option value="">Seleziona il linguaggio</option>
+
+      @foreach ($types as $type)
+      <option value="{{$type->id}}"
+        @if($project->type->id == old("type_id", $project->type?->id)) selected @endif
+        >{{$type->name}}</option>
+
+      @endforeach
+
+    </select>
+  </div>
+
+  <div class="mb-3">
     <label for="description" class="form-label">Descrizione</label>
     <input type="text-area" class="form-control" id="description" name="description" placeholder="inserisci la descrizione"
     value="{{old("description")}}"
@@ -52,12 +67,7 @@
     <img width="500" id="prev-image" src="{{$project?->image_path}}" alt="">
   </div>
   {{-- 3 --}}
-  <div class="mb-3">
-    <label for="languages" class="form-label">Linguaggio</label>
-    <input type="text" class="form-control" id="languages" name="languages" placeholder="inserisci il linguaggio"
-    value="{{old("languages")}}"
-    >
-  </div>
+
   {{-- 4 --}}
   <div class="mb-3">
     <label for="end_date" class="form-label">Data Consegna</label>

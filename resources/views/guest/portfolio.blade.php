@@ -18,8 +18,8 @@
           <div class="card-portfolio-title mb-1">{{$project->title}}</div>
         </div>
         <div class="tag">
-          <span class="badge badge-pill">
-            #photography
+          <span class="badge text-bg-primary">
+            {{$project->type?->name}}
           </span>
         </div>
     </div>

@@ -16,7 +16,7 @@ class Project extends Model
       "title",
       "slug",
       "description",
-      "languages",
+      "type_id",
       "end_date",
       "image_path",
       "image_original_name"

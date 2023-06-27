@@ -5,6 +5,8 @@ namespace Database\Seeders;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use App\Models\Project;
+use App\Models\Type;
+
 
 class ProjectsTableSeeder extends Seeder
 {
@@ -19,10 +21,10 @@ class ProjectsTableSeeder extends Seeder
 
       foreach ($projects as $project){
         $new_project = new Project();
+        $new_project->type_id = Type::inRandomOrder()->first()->id;
         $new_project->title = $project["title"];
         $new_project->description = $project["description"];
         $new_project->slug = Project::generateSlug($new_project->title);
-        $new_project->languages = $project["languages"];
         $new_project->end_date = $project["end_date"];
         $new_project->save();
       }
