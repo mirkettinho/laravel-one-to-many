@@ -1,0 +1,24 @@
+@import '~bootstrap/scss/bootstrap';
+
+
+@import "./guest/partials/header";
+@import "./guest/partials/home";
+@import "./guest/partials/about";
+@import "./guest/partials/portfolio";
+
+
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.container-personal{
+  width: 90%;
+  margin: 0 auto;
+}
+
+.active{
+  color: #ff7a57;
+}

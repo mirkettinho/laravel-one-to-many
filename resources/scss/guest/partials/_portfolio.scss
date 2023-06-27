@@ -1,0 +1,20 @@
+.card-portfolio{
+  background-color: aquamarine;
+  width: 300px;
+  .card-portfolio-image{
+    width: 100%;
+      img{
+        width: 100%;
+      }
+      .card-portfolio-description{
+        .card-portfolio-title{
+          font-weight: bold;
+        }
+      }
+      .tag{
+        span{
+          background-color: grey;
+        }
+      }
+  }
+}

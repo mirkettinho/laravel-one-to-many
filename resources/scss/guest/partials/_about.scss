@@ -1,0 +1,21 @@
+.content-about{
+  position: absolute;
+  font-size: 1.5rem;
+  width: 40%;
+
+  top: 30%;
+  left: 7%;
+}
+.image {
+  position: absolute;
+  top: 0;
+  right: 0;
+
+  width: 50%;
+  height: 100%;
+  background-image: url(https://img.freepik.com/free-vector/flat-design-no-photo-sign_23-2149277706.jpg?w=826&t=st=1687792263~exp=1687792863~hmac=2eb131cfffad11521cde2f253862611cb23cb96761456746a8000bac3b856600);
+  clip-path: polygon(35% 0%, 100% 0, 100% 100%, 8% 100%);
+
+  background-repeat: no-repeat;
+  background-size: cover;
+}
