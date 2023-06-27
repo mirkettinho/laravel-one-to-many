@@ -22,6 +22,12 @@ class Project extends Model
       "image_original_name"
     ];
 
+    // RELAZIONE TYPES
+    // NOME TABELLA IN MINUSCOLO E SINGOLARE, 1 PROGETTO HA 1 TIPO
+    public function type(){
+      return $this->belongsTo(Type::class);
+    }
+
     public static function generateSlug($str){
       $slug = Str::slug($str, '-');
       $original_slug = $slug;
